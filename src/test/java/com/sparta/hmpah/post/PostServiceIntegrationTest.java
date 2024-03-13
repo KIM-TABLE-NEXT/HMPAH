@@ -8,7 +8,7 @@ import com.sparta.hmpah.dto.requestDto.PostRequest;
 import com.sparta.hmpah.dto.responseDto.PostResponse;
 import com.sparta.hmpah.entity.User;
 import com.sparta.hmpah.repository.UserRepository;
-import com.sparta.hmpah.service.PostService;
+import com.sparta.hmpah.service.PostServiceImpl;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
@@ -24,7 +24,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 public class PostServiceIntegrationTest {
 
   @Autowired
-  PostService postService;
+  PostServiceImpl postService;
 
   @Autowired
   UserRepository userRepository;

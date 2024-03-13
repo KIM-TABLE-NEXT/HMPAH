@@ -3,7 +3,7 @@ package com.sparta.hmpah.controller;
 import com.sparta.hmpah.dto.requestDto.PostRequest;
 import com.sparta.hmpah.dto.responseDto.PostResponse;
 import com.sparta.hmpah.security.UserDetailsImpl;
-import com.sparta.hmpah.service.PostService;
+import com.sparta.hmpah.service.PostServiceImpl;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import java.util.List;
@@ -27,7 +27,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/posts")
 public class PostController {
 
-  private final PostService postService;
+  private final PostServiceImpl postService;
 
   @GetMapping
   @Operation(summary = "게시글 목록 조회(옵션)", description = "상태, 지역, 제목 옵션을 통해 게시글 목록을 조회한다.")

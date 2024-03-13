@@ -17,7 +17,7 @@ import com.sparta.hmpah.entity.User;
 import com.sparta.hmpah.entity.UserRoleEnum;
 import com.sparta.hmpah.security.UserDetailsImpl;
 import com.sparta.hmpah.service.KakaoService;
-import com.sparta.hmpah.service.PostService;
+import com.sparta.hmpah.service.PostServiceImpl;
 import com.sparta.hmpah.service.UserService;
 import java.security.Principal;
 import org.junit.jupiter.api.BeforeEach;
@@ -60,7 +60,7 @@ public class PostMvcTest {
   UserService userService;
 
   @MockBean
-  PostService postService;
+  PostServiceImpl postService;
 
   @MockBean
   KakaoService kakaoService;

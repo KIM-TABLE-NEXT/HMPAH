@@ -2,7 +2,6 @@ package com.sparta.hmpah.post;
 
 import com.sparta.hmpah.dto.requestDto.PostRequest;
 import com.sparta.hmpah.dto.responseDto.PostResponse;
-import com.sparta.hmpah.entity.LocationEnum;
 import com.sparta.hmpah.entity.Post;
 import com.sparta.hmpah.entity.User;
 import com.sparta.hmpah.repository.CommentLikeRepository;
@@ -11,9 +10,7 @@ import com.sparta.hmpah.repository.FollowRepository;
 import com.sparta.hmpah.repository.PostLikeRepository;
 import com.sparta.hmpah.repository.PostMemberRepository;
 import com.sparta.hmpah.repository.PostRepository;
-import com.sparta.hmpah.service.PostService;
-import java.util.ArrayList;
-import java.util.List;
+import com.sparta.hmpah.service.PostServiceImpl;
 import java.util.Optional;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -59,7 +56,7 @@ public class PostServiceTest {
         5
     );
 
-    PostService postService = new PostService(
+    PostServiceImpl postService = new PostServiceImpl(
         postRepository,
         commentRepository,
         postLikeRepository,
@@ -105,7 +102,7 @@ public class PostServiceTest {
         5
     );
 
-    PostService postService = new PostService(
+    PostServiceImpl postService = new PostServiceImpl(
         postRepository,
         commentRepository,
         postLikeRepository,
