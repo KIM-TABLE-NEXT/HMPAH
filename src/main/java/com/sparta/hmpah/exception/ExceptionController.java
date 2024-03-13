@@ -13,4 +13,9 @@ public class ExceptionController {
     public ResponseEntity<ExceptionResponse> handleIllegalArgumentException(final IllegalArgumentException ex) {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ExceptionResponse(400, ex.getMessage()));
     }
+
+    @ExceptionHandler({NullPointerException.class})
+    public ResponseEntity<ExceptionResponse> handleNullPointerException(final NullPointerException ex) {
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(new ExceptionResponse(400, ex.getMessage()));
+    }
 }

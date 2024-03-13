@@ -54,7 +54,7 @@ public class UserService {
         }
 
         if (additionalInfo == null) {
-            throw new IllegalArgumentException("AdditionalInfo가 제공되지 않았습니다.");
+            throw new NullPointerException("AdditionalInfo가 제공되지 않았습니다.");
         }
 
         try {
