@@ -5,6 +5,7 @@ import static com.sparta.hmpah.entity.PostStatusEnum.*;
 import com.sparta.hmpah.dto.requestDto.PostRequest;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -15,6 +16,7 @@ import lombok.ToString;
 @Setter
 @Table(name = "posts")
 @NoArgsConstructor//(access = AccessLevel.PROTECTED)
+@AllArgsConstructor
 public class Post extends TimeStamped {
 
     @Id
